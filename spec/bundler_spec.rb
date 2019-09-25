@@ -28,17 +28,17 @@ describe "Bundler" do
     end
 
     # http://bundler.io/v1.3/gemfile.html
-    it "should list the sinatra gem with the specific version 1.4.4" do
+    xit "should list the sinatra gem with the specific version 1.4.4" do
       expect(@gemfile_text =~ /gem .sinatra., .v?1\.4\.4./).not_to eq(nil)
     end
 
     # http://robots.thoughtbot.com/post/2508037841/rubys-pessimistic-operator
-    it "should list the octokit gem specifying version 2.0 with a twiddle-wakka" do
+    xit "should list the octokit gem specifying version 2.0 with a twiddle-wakka" do
       expect(@gemfile_text =~ /gem .octokit.*.~>.?2\.0./).not_to eq(nil)
     end
 
     # http://bundler.io/git.html
-    it "should list the awesome_print gem specifying a remote git repository (use github)" do
+    xit "should list the awesome_print gem specifying a remote git repository (use github)" do
       expect(@gemfile_text =~ /gem .awesome_print.,.*git.*/).not_to eq(nil)
     end
 
@@ -48,7 +48,7 @@ describe "Bundler" do
       end
 
       # http://bundler.io/v1.3/groups.html
-      it "should contain the pry gem in the development group using a hash argument to the gem method" do
+      xit "should contain the pry gem in the development group using a hash argument to the gem method" do
         expect(@gemfile_text =~ /gem .pry.,.*group.*development'?/).not_to eq(nil)
         expect(@bundle_output =~ /pry/).not_to eq(nil)
 
@@ -60,7 +60,7 @@ describe "Bundler" do
       end
 
       # http://bundler.io/v1.3/groups.html
-      it "should contain the rspec gem in the test group using block syntax" do
+      xit "should contain the rspec gem in the test group using block syntax" do
         expect(@gemfile_text =~ /group .*test.* do/).not_to eq(nil)
         expect(@bundle_output =~ /rspec/).not_to eq(nil)
 
